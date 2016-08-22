@@ -1,0 +1,39 @@
+# Work progress documentation
+
+16 August,2016
+
+->Basic Discussions to choose between Website and Game.
+Decided to work on website.
+->Decided to shedule video preparation to 1st September because it was seemingly easy.
+->Initial team mebers: Adarsh,Athul,Amal,Subin,Gowrisankar
+
+19 August, 2016
+
+->Ravisankar and Vysakh joins the team.
+
+20 August 2016 
+
+->Ravisankar suggest scrapy python library for getting car details from websites..
+Vysakh suggests BeautifulSoup library for the same.
+
+21 August 2016, Sunday 
+
+->Team worked on scrapy set-up
+->Basic action plan for the week was formed. Web scraping things were given 1 week deadline.
+
+22 August 2016 , Monday
+
+->Started team GitHub account.
+->Finalized on the tools to be used for the task :
+Firebase as backend, 
+HTML ,CSS and Javascript for the frontend webapp
+Json for storing data.
+->Assigned works for team members:
+Athuljith and Amal- Manually parsing the data from websites in case we couldnt complete the scraper
+Gowrisankar and Vysakh- Try to use python scraping lybraries to create spiders to auto-crawl data.
+Adarsh- For setting up the firebase backend
+Ravisankar- Javascript part of webapp
+Subin- Design of vector graphics, design of the webapp.
+
+
+
