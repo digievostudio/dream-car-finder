@@ -37,6 +37,11 @@ Subin- Design of vector graphics, design of the webapp.
 
 24 August, 2016
 ->Hosted the firebase sample code to test and learn about firebase database and hosting. https://dream-car-finder-init.firebaseapp.com
+->->Skelton of webapp landing page completed.
 
 25 August
 ->Manual parsers created a general format of car data and entered the first car (Ford Figo) data to Google Sheets.
+
+
+26 August, 2016
+->Testing csv to json converters since firebase only supports json format for data input
