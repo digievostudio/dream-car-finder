@@ -1,6 +1,6 @@
 # dream-car-finder
 
-	• Web App URL: https://dream-car-ac5a2.firebaseapp.com
+	• [Web App URL]: (https://dream-car-ac5a2.firebaseapp.com)
 
 	• Video Task URL: https://www.facebook.com/subin.edward/videos/1165313196861585/
 
