@@ -13,6 +13,7 @@ We used stackoverflow extensively and so was w3schools and tutorialspoint. Also 
 But there was roadblocks. We had to drop some proposed functions of our websites because we were stuck and running out of time.
 Initially we thought of automatically scraping details of the cars using scrapy and python. But it didnt work out. So we had to manually build our database.
 Also we proposed a My Account page for our website, but couldnt finish it.
+We tested the website on only one screen resolution. So on different screens the site looks not as intended. It was too late to update when we became aware of the issue.
 
 Now about our website: 
 We wanted our website to be different. We checked the prominent players and they were almost similar. But we chose a simplistic approach.
