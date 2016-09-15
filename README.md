@@ -1,12 +1,14 @@
 # dream-car-finder
 
-	• [Web App URL]: (https://dream-car-ac5a2.firebaseapp.com)
+	#### Links:
+	
+	• [Website ](https://dream-car-ac5a2.firebaseapp.com)
 
-	• Video Task URL: https://www.facebook.com/subin.edward/videos/1165313196861585/
+	• [Video Task](https://www.facebook.com/subin.edward/videos/1165313196861585/)
 
-	• Our day to day progress and updates are in :  dream-car-finder/work-progress 
+	• [Our day to day progress and updates](https://github.com/digievostudio/dream-car-finder/blob/master/work-progress)
 
-	• Our one month long sv.co journey is described here :  dream-car-finder/OurJourney 
+	• [Our one month long sv.co journey](https://github.com/digievostudio/dream-car-finder/blob/master/OurJourney)
 
-	• Planned Updates to our website are listed here :  dream-car-finder/ToDos
+	• [Planned Updates to our website](https://github.com/digievostudio/dream-car-finder/blob/master/ToDos)
 
