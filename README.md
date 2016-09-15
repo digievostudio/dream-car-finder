@@ -10,4 +10,3 @@
 
 	• Planned Updates to our website are listed here :  dream-car-finder/ToDos
 
-	• Tools used for making the website :  dream-car-finder/Tools Used 
