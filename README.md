@@ -1,13 +1,13 @@
 # dream-car-finder
 
-Web App URL: dream-car.firebaseapp.com
+	• Web App URL: dream-car.firebaseapp.com
 
-Video Task URL: https://www.facebook.com/subin.edward/videos/1165313196861585/
+	• Video Task URL: https://www.facebook.com/subin.edward/videos/1165313196861585/
 
-Our day to day progress and updates are in :  dream-car-finder/work-progress 
+	• Our day to day progress and updates are in :  dream-car-finder/work-progress 
 
-Our one month long sv.co journey is described here :  dream-car-finder/OurJourney 
+	• Our one month long sv.co journey is described here :  dream-car-finder/OurJourney 
 
-Planned Updates to our website are listed here :  dream-car-finder/ToDos
+	• Planned Updates to our website are listed here :  dream-car-finder/ToDos
 
-Tools used for making the website :  dream-car-finder/Tools Used 
+	• Tools used for making the website :  dream-car-finder/Tools Used 
