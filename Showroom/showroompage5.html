@@ -1,0 +1,98 @@
+<p>
+
+
+<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBPiin7LfUpf03CU_uPpRwgkYmaQrwB5cY",
+    authDomain: "dream-car-ac5a2.firebaseapp.com",
+    databaseURL: "https://dream-car-ac5a2.firebaseio.com",
+    storageBucket: "dream-car-ac5a2.appspot.com",
+    messagingSenderId: "1022872064485"
+  };
+  firebase.initializeApp(config);
+</script>
+    
+</p>
+<p>
+<script>	
+
+var namearr=[];
+namearr.length = 0;
+var imagearr=[];
+imagearr.length = 0;
+var pricearr=[];
+pricearr.length = 0;
+var absarr=[];
+absarr.length = 0;
+var airbagarr=[];
+airbagarr.length = 0;
+var btypearr=[];
+btypearr.length = 0;
+var fuelarr=[];
+fuelarr.length = 0;
+var seatsarr=[];
+seatsarr.length = 0;
+var efficiencyarr=[];
+efficiencyarr.length = 0;
+var I=0;
+var j=0;
+var k=0;
+var ref = firebase.database().ref("cars-data");
+ref.orderByKey().endAt("149").on("child_added", function(snapshot) {
+//var declare
+   var NAME = snapshot.child("Car Name").val();
+   var PRICE = snapshot.child("Price").val();
+   var ANTIBS = snapshot.child("ABS").val();
+   var AIRBAG = snapshot.child("Airbags(passenger-dual)").val();
+   var SEATS = snapshot.child("No of seats").val();
+   var FUEL = snapshot.child("Fuel(petrol-diesel)").val();
+   var EFFICIENCY = snapshot.child("Mileage").val();
+   var BODYTYPE = snapshot.child("Body Type").val();
+   var IMAGE = snapshot.child("Image").val();
+	
+ 	k=k+1;
+if(k>120)
+{
+
+						        namearr.push(NAME);
+							var find = '-257';
+							var re = new RegExp(find, 'g');
+
+							IMAGE = IMAGE.replace(re, '/');
+							imagearr.push(IMAGE);
+							pricearr.push(PRICE);
+							absarr.push(ANTIBS);
+							airbagarr.push(AIRBAG);
+							btypearr.push(BODYTYPE);
+							fuelarr.push(FUEL);
+							seatsarr.push(SEATS);
+							efficiencyarr.push(EFFICIENCY);
+                                			localStorage["namearr"] = JSON.stringify(namearr);
+							localStorage["imagearr"] = JSON.stringify(imagearr);
+							localStorage["pricearr"] = JSON.stringify(pricearr);
+							localStorage["absarr"] = JSON.stringify(absarr);
+							localStorage["airbagarr"] = JSON.stringify(airbagarr);
+							localStorage["btypearr"] = JSON.stringify(btypearr);
+							localStorage["fuelarr"] = JSON.stringify(fuelarr);
+							localStorage["seatsarr"] = JSON.stringify(seatsarr);
+							localStorage["efficiencyarr"] = JSON.stringify(efficiencyarr);
+}
+							
+						
+if(k==150)
+{
+
+	window.location="result2.html";	
+}   
+});
+
+</script>
+</p>
+
+<html>
+<title>LOADING</title>
+<body background="loading.jpeg">
+</body>
+</html>
