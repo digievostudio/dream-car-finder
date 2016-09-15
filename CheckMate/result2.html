@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="tabs.css" type="text/css" media="screen, projection"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
+<style type="text/css">
+@import 'https://fonts.googleapis.com/css?family=Lilita+One';
+#mainb{
+	background-image:url(back.jpg);
+	width:100%;
+	position:relative;
+	height:100%;
+	margin-top:-30px;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+#topbar{
+	height:75px;
+	width:1408px;
+	
+	margin-left:-50px;
+	margin-top:30px;
+	overflow:hidden;
+}
+html, body {
+    max-width: 100%;
+}
+.chkmt{
+	margin-left:70px;
+	color:white;
+	overflow:auto;
+	margin-top:10px;
+	font-family: 'Lilita One', cursive;
+	font-size:45px;
+}
+.chkmtr{
+	margin-left:15px;
+	color:white;
+	overflow:auto;
+	margin-top:0px;
+	font-family: 'Lilita One', cursive;
+	font-size:25px;
+}
+#menu{
+	margin-left:920px;
+	width:900px;
+	height:140px;
+	margin-top:-60px;
+	font-size:20px;
+	color:black;
+}
+#menu ul{
+	list-style: none;
+}
+#menu li {
+  display: inline-block;
+}
+#m1{
+	margin-top:5px;
+}
+
+
+#tabs{
+	color:white;
+}
+
+.myButton {
+	-moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+	background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+	background-color:#599bb3;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:10px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+	background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+#r{
+	margin-left:30px;
+	color: white;
+}
+.carname{
+	margin-top:-100px;
+	color:grey;
+	margin-left:100px;
+	font-size:20px;
+}
+.carprice{
+	margin-top:5px;
+}
+</style>
+<title>CheckMate Result</title>
+</head>
+
+<body background="back.jpg">
+<div id="mainb">
+    <div id="topbar">
+    <p class="chkmt">CHECKMATE</p>
+    </div>
+    <div id="menu">
+      <ul>
+        <li id="m1"><a href="../index.html" class="myButton">HOME</a></li>
+        <li id="m3"><a href="../Showroom/showroompage1.html" class="myButton">SHOWROOM</a></li>
+        <li id="m4"><a href="../AboutUs/aboutus.html" class="myButton">ABOUT US</a></li>
+      </ul>
+    </div>
+	<div id="r">
+    	<script>
+			var j=0;
+			var namearr1 = JSON.parse(localStorage["namearr"]);
+			var imagearr1 = JSON.parse(localStorage["imagearr"]);
+			var pricearr1 = JSON.parse(localStorage["pricearr"]);
+			var absarr1 = JSON.parse(localStorage["absarr"]);
+			var airbagarr1 = JSON.parse(localStorage["airbagarr"]);
+			var seatsarr1 = JSON.parse(localStorage["seatsarr"]);
+			var fuelarr1 = JSON.parse(localStorage["fuelarr"]);
+			var btypearr1 = JSON.parse(localStorage["btypearr"]);
+			var efficiencyarr1 = JSON.parse(localStorage["efficiencyarr"]);
+			document.write(namearr1.length, " CARS FOUND!");
+			
+			document.write("<br><br><br>");
+			for(j=0;j<namearr1.length;j++)
+			{
+				document.write('<img height="100" width="100" src="' + imagearr1[j] + '">');	
+				document.write("<br>");
+				document.write("  ",namearr1[j]);
+				document.write("<br>");
+				document.write("  PRICE:",parseInt(pricearr1[j])*1000);
+				document.write("<br>");
+				document.write("  MILAGE:",efficiencyarr1[j]);
+				document.write("<br><br>");
+			}
+			localStorage.clear();
+			alert("CHECKMATE!!")
+		</script>
+	</div>
+</div>
+</body>
+</html>

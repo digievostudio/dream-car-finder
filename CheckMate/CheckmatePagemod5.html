@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CheckMate</title>
+<link rel="stylesheet" href="tabs.css" type="text/css" media="screen, projection"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
+
+
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.7.custom.min.js"></script>
+<script type="text/javascript">
+$(function() {
+
+			var $tabs = $('#tabs').tabs();
+	
+			$(".ui-tabs-panel").each(function(i){
+	
+			  var totalSize = $(".ui-tabs-panel").size() - 1;
+	
+			  if (i != totalSize) {
+			      next = i + 2;
+		   		  $(this).append("<a href='#' class='next-tab mover' rel='" + next + "'>Next Question &#187;</a>");
+			  }
+	  
+			  if (i != 0) {
+			      prev = i;
+		   		  $(this).append("<a href='#' class='prev-tab mover' rel='" + prev + "'>&#171; Previous Question</a>");
+			  }
+   		
+			});
+	
+			$('.next-tab, .prev-tab').click(function() { 
+		           $tabs.tabs('select', $(this).attr("rel"));
+		           return false;
+		       });
+       
+
+		});
+</script>
+<script>
+
+function myFunction() {
+	var radios = document.getElementsByName('fuel');
+	for (var i = 0, length = radios.length; i < length; i++) {
+    		if (radios[i].checked) {
+     
+       		localStorage["fuel"] =radios[i].value;
+                break;
+                }
+         }
+	radios = document.getElementsByName('abs');
+	for (var i = 0, length = radios.length; i < length; i++) {
+    		if (radios[i].checked) {
+
+       		localStorage["antibs"] =radios[i].value;
+                break;
+                }
+         }
+	radios = document.getElementsByName('ars');
+	for (var i = 0, length = radios.length; i < length; i++) {
+    		if (radios[i].checked) {
+ 
+       		localStorage["airbag"] =radios[i].value;
+                break;
+                }
+         }
+	radios = document.getElementsByName('carbody');
+	for (var i = 0, length = radios.length; i < length; i++) {
+    		if (radios[i].checked) {
+ 
+       		localStorage["bodytype"] =radios[i].value;
+                break;
+                }
+         }
+	var eff = document.getElementById('efficiency');
+       var pricel = document.getElementById('pricel');
+       var priceh = document.getElementById('priceh');
+	localStorage["efficiency"] =eff.value;
+        localStorage["pricel"] =pricel.value;
+	localStorage["priceh"] =priceh.value;
+	
+	//alert(localStorage.getItem("bodytype"));
+	//alert(localStorage.getItem("antibs"));
+	//alert(localStorage.getItem("airbag"));
+	
+	//alert(localStorage.getItem("pricel"));
+	//alert(localStorage.getItem("priceh"));
+	//alert(localStorage.getItem("efficiency"));
+	window.location="result1.html";
+};
+</script>
+
+<style type="text/css">
+@import 'https://fonts.googleapis.com/css?family=Lilita+One';
+#mainb{
+width:100%;
+background-size:cover;
+position:relative;
+height:100%;
+margin-top:-30px;
+}
+#topbar{
+	height:75px;
+	width:1408px;
+	
+	margin-left:-50px;
+	margin-top:30px;
+	overflow:hidden;
+}
+#chkmt{
+	margin-left:70px;
+	color:white;
+	overflow:auto;
+	margin-top:10px;
+	font-family: 'Lilita One', cursive;
+	font-size:45px;
+}
+
+#menu{
+	margin-left:920px;
+	width:900px;
+	height:140px;
+	margin-top:-60px;
+	font-size:20px;
+	color:black;
+}
+#menu ul{
+	list-style: none;
+}
+#menu li {
+  display: inline-block;
+}
+#m1{
+	margin-top:5px;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#tabs{
+	color:white;
+}
+
+.myButton {
+	-moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+	background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+	background-color:#599bb3;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:10px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+	background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.dialog{
+	color:white;
+}
+.radio{
+	margin-top:20px;
+}
+.qhead{
+	font-size:25px;
+}
+#runchk{
+	margin-left:700px;
+	margin-top:50px;
+}
+</style>
+</head>
+
+<body background="main1.jpg">
+
+<div id="mainb">
+<div id="topbar">
+<p id="chkmt">CHECKMATE</p>
+</div>
+<div id="menu">
+  <ul>
+    <li id="m1"><a href="../index.html" class="myButton">HOME</a></li>
+    <li id="m3"><a href="../Showroom/showroompage1.html" class="myButton">SHOWROOM</a></li>
+    <li id="m4"><a href="../AboutUs/aboutus.html" class="myButton">ABOUT US</a></li>
+  </ul>
+</div>
+
+
+
+<div id="page-wrap">
+		
+		<div id="tabs">
+		
+    		<ul>
+        		<li><a href="#fragment-1">1</a></li>
+        		<li><a href="#fragment-2">2</a></li>
+        		<li><a href="#fragment-3">3</a></li>
+        		<li><a href="#fragment-4">4</a></li>
+        		<li><a href="#fragment-5">5</a></li>
+        		<li><a href="#fragment-6">6</a></li>
+    	   </ul>
+	
+        	<div id="fragment-1" class="ui-tabs-panel">
+                   <form class="form-horizontal">
+                   <div class="form-group">
+          	   	   		<label for="fuel" class="qhead">FUEL TYPE</label>
+                   		<div class="radio">
+                   			<label>
+              	   				<input type="radio" name="fuel" id="fuel1" value="petrol" checked="checked">
+              	   					Petrol
+            	   			</label>
+          				</div>
+          				<div class="radio">
+            				<label>
+				              <input type="radio" name="fuel" id="fuel2" value="diesel">
+              						Diesel
+            				</label>
+          				</div>
+          				<div class="radio">
+            				<label>
+              					<input type="radio" name="fuel" id="fuel3" value="na">
+              						Doesn't Matter
+            				</label>
+          				</div>
+        			</div>                  
+        	</div>
+        	
+        	<div id="fragment-2" class="ui-tabs-panel ui-tabs-hide">
+                   <form class="form-horizontal">
+                   <div class="form-group">
+          	   	   		<label for="abs" class="qhead">DO YOU REQUIRE ABS?</label>
+                   		<div class="radio">
+                   			<label>
+              	   				<input type="radio" name="abs" id="abs1" value="yes" checked="checked">
+              	   					Yes
+            	   			</label>
+          				</div>
+          				<div class="radio">
+            				<label>
+				              <input type="radio" name="abs" id="abs2" value="no">
+              						No
+            				</label>
+          				</div>
+          				<div class="radio">
+            				<label>
+              					<input type="radio" name="abs" id="abs3" value="na">
+              						Doesn't Matter
+            				</label>
+          				</div>
+        			</div>
+            </div>
+            
+        	<div id="fragment-3" class="ui-tabs-panel ui-tabs-hide">
+                   <form class="form-horizontal">
+                   <div class="form-group">
+          	   	   		<label for="carbody" class="qhead">BODY TYPE</label>
+                   		<div class="radio">
+                   			<label>
+              	   				<input type="radio" name="carbody" id="carbody1" value="hatchback" checked="checked">
+              	   					HATCHBACK
+            	   			</label>
+          				</div>
+          				<div class="radio">
+            				<label>
+				              <input type="radio" name="carbody" id="carbody2" value="sedan">
+              						SEDAN
+            				</label>
+          				</div>
+          				<div class="radio">
+            				<label>
+              					<input type="radio" name="carbody" id="carbody3" value="uv">
+              						MUV & SUV (Multi/Super Utility Vehicle)
+            				</label>
+          				</div>
+          				<div class="radio">
+            				<label>
+              					<input type="radio" name="carbody" id="carbody4" value="mpv">
+              						MPV (Multi Purpose Vehicle)
+            				</label>
+          				</div>
+          				
+          				<div class="radio">
+            				<label>
+              					<input type="radio" name="carbody" id="carbody7" value="na">
+              						DOSEN'T MATTER
+            				</label>
+          				</div>                                                                                           
+        			</div>            
+            </div>
+        
+        	<div id="fragment-4" class="ui-tabs-panel ui-tabs-hide">
+                   <form class="form-horizontal">
+                   <div class="form-group">
+          	   	   		<label for="arb" class="qhead">DO YOU REQUIRE AIRBAGS?</label>
+                   		<div class="radio">
+                   			<label>
+              	   				<input type="radio" name="ars" id="ars1" value="yes" checked="checked">
+              	   					Yes
+            	   			</label>
+          				</div>
+          				<div class="radio">
+            				<label>
+				              <input type="radio" name="ars" id="ars2" value="no">
+              						No
+            				</label>
+          				</div>
+          				<div class="radio">
+            				<label>
+              					<input type="radio" name="ars" id="ars3" value="na">
+              						Doesn't Matter
+            				</label>
+          				</div>
+        			</div>
+        	</div>
+        	
+        	<div id="fragment-5" class="ui-tabs-panel ui-tabs-hide">
+                   <div class="form-group">
+			          <label for="fullname" class="qhead">FUEL EFFICIENCY</label>
+			          <input type="text" class="form-control" id="efficiency" placeholder="Enter the lower bound integer" name="efficiency">
+		          </div>
+        	</div>
+        
+        	<div id="fragment-6" class="ui-tabs-panel ui-tabs-hide">
+                   <div class="form-group">
+			          <label for="price" class="qhead">PRICE SELECTION</label>
+                      <h4>Enter lower bound : </h4>
+			          <input type="text" class="form-control" id="pricel" placeholder="Enter the lower bound" name="pricel">
+                      <h4>Enter upper bound : </h4>
+                      <input type="text" class="form-control" id="priceh" placeholder="Enter the upper bound" name="priceh">
+                      <a href="#" class="myButton" id="runchk" onclick="myFunction()" >RUN CHECKMATE!</a>
+		          </div>       
+        	</div>
+
+        </div>
+		
+	</div>
+</div>
+
+</body>
+
+</html>
