@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DreamCar</title>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+var x = 480;
+var y = 408;
+var speed = 5;
+var angle = 0;
+var mod = 0;
+var canvas,context,car;
+
+
+
+window.addEventListener("keydown", keypress_handler, false);
+window.addEventListener("keyup", keyup_handler, false);
+
+var moveInterval = setInterval(function () {
+    draw();
+}, 10);
+
+function draw() {
+	canvas = document.getElementById("pcanvas");
+	context = canvas.getContext("2d");
+	car = new Image();
+    car.src = 'c1.jpg';
+    context.clearRect(0, 0, 1200, 1200);
+
+    
+
+    x -= (speed * mod) * Math.sin(-1 * Math.PI / 180 * angle);
+    y -= (speed * mod) * Math.cos(-1 * Math.PI / 180 * angle);
+
+    context.save();
+	if(x<1200&&y<700){
+	    context.translate(x, y);
+    	context.rotate(Math.PI / 180 * angle);
+    	context.drawImage(car, -(car.width / 2), -(car.height / 2));
+    	context.restore();
+	}
+	if(x>420&&x<550&&y>0&&y<100)
+		window.location.href = "CheckMate/CheckmatePagemod5.html"
+	if(x>0&&x<70&&y>200&&y<300)
+		window.location.href = "Showroom/showroompage1.html"
+	if(x>890&&x<970&&y>200&&y<300)
+		window.location.href = "AboutUs/aboutus.html"
+}
+
+function keyup_handler(event) {
+    if (event.keyCode == 40 || event.keyCode == 38) {
+        mod = 0;
+    }
+}
+
+function keypress_handler(event) {
+    console.log(event.keyCode);
+    if (event.keyCode == 38) {
+        mod = 1;
+    }
+    if (event.keyCode == 40) {
+        mod = -1;
+    }
+    if (event.keyCode == 37) {
+        angle -= 5;
+    }
+    if (event.keyCode == 39) {
+        angle += 5;
+    }
+}
+
+window.addEventListener("keydown", function(e) {
+    if([32, 33, 34, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+}, false);
+</script>
+
+
+<script type="text/javascript"> alert("USE ARROW KEYS TO CONTROL THE CAR"); </script>
+
+
+<style type="text/css">
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+#mainb{
+	
+	margin-top:-100px;
+	width:100%;
+	background-size:cover;
+	height:100%;
+	
+	position:relative;
+	
+}
+body{
+	background-color:black;
+}
+#head1{
+	margin-left:550px;
+	margin-top:160px;
+}
+h3{
+	margin-left:450px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size:30px;
+}
+#inhtml{
+	height:900px;
+	width:1000px;
+}
+#cnv{
+	background-image:url(Homepage/back%20grass.jpg);
+}
+html, body {margin: 0; height: 100%; overflow: hidden}
+</style>
+</head>
+
+<body onLoad="draw()" onkeydown="keypress_handler(event)" onkeyup="keyup_handler(event)" background="Homepage/back2.jpg">
+<div id="mainb">
+	<img src="Homepage/heading2.jpg" id="head1" />
+	<h3>YOUR DREAM CAR YOU DIDN'T KNOW OF...YET!</h3>
+	<div style="width:1000px;height:450px;border:1px solid #000; margin-left:200px; margin-top:50px;" id="box">
+    	<div id="cnv">
+    		<canvas id="pcanvas" width="1000" height="450" ></canvas>
+    	</div>
+	</div>
+</div>
+</body>
+</html>
+
