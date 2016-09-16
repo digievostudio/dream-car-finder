@@ -2,9 +2,8 @@
 
 #### Links:
 	
-[Website](https://dream-car-ac5a2.firebaseapp.com) : https://dream-car-ac5a2.firebaseapp.com
-
-[Video Task](https://www.facebook.com/subin.edward/videos/1165313196861585/) : https://www.facebook.com/subin.edward/videos/1165313196861585/
+[Website](https://dream-car-ac5a2.firebaseapp.com)
+[Video Task](https://www.facebook.com/subin.edward/videos/1165313196861585/)
 
 [Our day to day progress and updates](https://github.com/digievostudio/dream-car-finder/blob/master/work-progress) : https://github.com/digievostudio/dream-car-finder/blob/master/work-progress
 
