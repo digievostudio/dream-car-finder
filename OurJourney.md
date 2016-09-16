@@ -6,7 +6,7 @@ All of us were **beginners** in web developement. This is our **first web projec
 On searching the internet we found the php+mysql way for building a website with database.
 
 Some of us were into android developement and has heard about firebase. We decided to use **firebase** since it provide an easy way to access and update database.
-But none of us had any idea about **javascript**. But since we knew C++ ,the language seemed similar in logic.
+But none of us had any idea about **javascript**. But since we knew C++ ,the language seemed similar in logic. For hosting the website , *firebase hosting* was used.
 
 We used **stackoverflow** extensively and so was **w3schools** and **tutorialspoint**. Also the well documented firebase guides and API reference helped us in our way.
 
