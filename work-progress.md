@@ -90,3 +90,6 @@ Data parsing 90% completed
 ####16 Septemmber 2016
 ->Adding markdown to dithub code
 ->Minor edit to homepage background
+
+####17 Septemmber 2016
+-> Edit the display style of checkmate results
