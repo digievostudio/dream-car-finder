@@ -66,6 +66,18 @@ html, body {
 #tabs{
 	color:white;
 }
+#jstext {
+  text-align: center;
+  font-size: 30px;
+}
+#jstext2 {
+  text-align: center;
+  font-size: 20px;
+}
+#jstext3 {
+  text-align: center;
+  font-size: 15px;
+}
 
 .myButton {
 	-moz-box-shadow: 0px 10px 14px -7px #276873;
@@ -151,15 +163,18 @@ html, body {
 			
 			document.write("<br><br><br>");
 			for(j=0;j<namearr1.length;j++)
-			{
-				document.write('<img height="100" width="100" src="' + imagearr1[j] + '">');	
-				document.write("<br>");
-				document.write("  ",namearr1[j]);
-				document.write("<br>");
-				document.write("  PRICE:",parseInt(pricearr1[j])*1000);
-				document.write("<br>");
-				document.write("  MILAGE:",efficiencyarr1[j]);
-				document.write("<br><br>");
+			{		
+			document.write("<br><br>");	
+			document.write('<p id="jstext">' +namearr1[j]+'</p>');
+			document.write("<br>");
+			document.write('<center><img height="300" width="400" align="middle" src="' + imagearr1[j] + '"></center>');
+			document.write("<br>");
+			document.write('<p id="jstext2">' +"Rs. ",parseInt(pricearr1[j])*1000+'</p>');
+			document.write('<p id="jstext3">' +"BODY TYPE : ",btypearr1[j]," "+'</p>');
+			document.write('<p id="jstext3">' +" SEATS : ",seatsarr1[j]+'</p>');
+			document.write('<p id="jstext3">' +"FUEL : ",fuelarr1[j],"   ||    "+" MILAGE : ",efficiencyarr1[j]+'</p>');			
+			document.write('<p id="jstext3">' +"AIRBAG : ",airbagarr1[j],"    ||    "+" ABS : ",absarr1[j]+'</p>');
+			document.write("<br>");
 			}
 			localStorage.clear();
 			alert("CHECKMATE!!")
