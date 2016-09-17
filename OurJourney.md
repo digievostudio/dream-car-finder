@@ -10,7 +10,7 @@ But none of us had any idea about **javascript**. But since we knew C++ ,the lan
 
 We used **stackoverflow** extensively and so was **w3schools** and **tutorialspoint**. Also the well documented firebase guides and API reference helped us in our way.
 
-The car *data* was fetched from the website carzoom.in and was stored in an excel csv ( [www.tiny.cc/svcodata](www.tiny.cc/svcodata) ) in google sheets and converted to **json** using an online converter to upload to the firebase database.
+The car *data* was fetched from the website carzoom.in and was stored in an excel csv ( [http://www.tiny.cc/svcodata](http://www.tiny.cc/svcodata) ) in google sheets and converted to **json** using an online converter to upload to the firebase database.
 
 But there was **roadblocks**. We had to drop some proposed functions of our websites because we were stuck and running out of time.
 Initially we thought of *automatically scraping* details of the cars using scrapy and python. But it didnt work out. So we had to manually build our database.
