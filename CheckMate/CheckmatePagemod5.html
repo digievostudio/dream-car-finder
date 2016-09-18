@@ -20,12 +20,12 @@ $(function() {
 			  var totalSize = $(".ui-tabs-panel").size() - 1;
 	
 			  if (i != totalSize) {
-			      next = i + 2;
+			      next = i + 1;
 		   		  $(this).append("<a href='#' class='next-tab mover' rel='" + next + "'>Next Question &#187;</a>");
 			  }
 	  
 			  if (i != 0) {
-			      prev = i;
+			      prev = i-1;
 		   		  $(this).append("<a href='#' class='prev-tab mover' rel='" + prev + "'>&#171; Previous Question</a>");
 			  }
    		
@@ -40,9 +40,39 @@ $(function() {
 		});
 </script>
 <script>
+/*slider code below*/
+function getVals(){
+  // Get slider values
+  var parent = this.parentNode;
+  var slides = parent.getElementsByTagName("input");
+    var slide1 = parseFloat( slides[0].value );
+    var slide2 = parseFloat( slides[1].value );
+  // Neither slider will clip the other, so make sure we determine which is larger
+  if( slide1 > slide2 ){ var tmp = slide2; slide2 = slide1; slide1 = tmp; }
+  
+  var displayElement = parent.getElementsByClassName("rangeValues")[0];
+      displayElement.innerHTML = slide1+" Lakh(s)" + " to " + slide2+" Lakh(s)\n";
+        localStorage["slide1"]=slide1;
+	localStorage["slide2"]=slide2;
+}
 
+window.onload = function(){
+  // Initialize Sliders
+  var sliderSections = document.getElementsByClassName("range-slider");
+      for( var x = 0; x < sliderSections.length; x++ ){
+        var sliders = sliderSections[x].getElementsByTagName("input");
+        for( var y = 0; y < sliders.length; y++ ){
+          if( sliders[y].type ==="range" ){
+            sliders[y].oninput = getVals;
+            // Manually trigger event first time to display values
+            sliders[y].oninput();
+          }
+        }
+      }
+}
+/*slider code end*/
 function myFunction() {
-	var radios = document.getElementsByName('fuel');
+		var radios = document.getElementsByName('fuel');
 	for (var i = 0, length = radios.length; i < length; i++) {
     		if (radios[i].checked) {
      
@@ -75,16 +105,16 @@ function myFunction() {
                 }
          }
 	var eff = document.getElementById('efficiency');
-       var pricel = document.getElementById('pricel');
-       var priceh = document.getElementById('priceh');
+	var slidel=localStorage.getItem("slide1");
+	var slideh=localStorage.getItem("slide2");
+	var priceh=slideh*100000;
+	var pricel=slidel*100000;
 	localStorage["efficiency"] =eff.value;
-        localStorage["pricel"] =pricel.value;
-	localStorage["priceh"] =priceh.value;
-	
+    localStorage["pricel"] =pricel;
+	localStorage["priceh"] =priceh;
 	//alert(localStorage.getItem("bodytype"));
 	//alert(localStorage.getItem("antibs"));
 	//alert(localStorage.getItem("airbag"));
-	
 	//alert(localStorage.getItem("pricel"));
 	//alert(localStorage.getItem("priceh"));
 	//alert(localStorage.getItem("efficiency"));
@@ -197,6 +227,56 @@ html, body {
 	margin-left:700px;
 	margin-top:50px;
 }
+/*below lie slider style*/
+ section.range-slider {
+    position: relative;
+    width: 400px;
+    height: 85px;
+    text-align: center;
+}
+
+section.range-slider input {
+    pointer-events: none;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 15px;
+    width: 400px;
+    outline: none;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+}
+
+section.range-slider input::-webkit-slider-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 1;
+    outline: 0;
+}
+
+section.range-slider input::-moz-range-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+    -moz-appearance: none;
+    width: 9px;
+}
+
+section.range-slider input::-moz-range-track {
+    position: relative;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 1);
+    border: 0;
+}
+section.range-slider input:last-of-type::-moz-range-track {
+    -moz-appearance: none;
+    background: none transparent;
+    border: 0;
+}
+  section.range-slider input[type=range]::-moz-focus-outer {
+  border: 0;
+}
 </style>
 </head>
 
@@ -221,6 +301,7 @@ html, body {
 		<div id="tabs">
 		
     		<ul>
+        		<li><a href="#fragment-0">CheckMate</a></li>
         		<li><a href="#fragment-1">1</a></li>
         		<li><a href="#fragment-2">2</a></li>
         		<li><a href="#fragment-3">3</a></li>
@@ -228,7 +309,11 @@ html, body {
         		<li><a href="#fragment-5">5</a></li>
         		<li><a href="#fragment-6">6</a></li>
     	   </ul>
-	
+		<div id="fragment-0" class="ui-tabs-panel">
+                       <h1><strong>With checkmate,</strong></h1> <h3><strong>you are just a few steps away from finding your dream car</strong></h3>
+                       <br>
+                       <h5><strong>We designed CheckMate to help you find the car you are looking for.</strong><br> <br><strong>Just answer the following six questions and you will be looking at your dream car in seconds !!</strong></h5>
+        	</div>
         	<div id="fragment-1" class="ui-tabs-panel">
                    <form class="form-horizontal">
                    <div class="form-group">
@@ -349,13 +434,18 @@ html, body {
 		          </div>
         	</div>
         
+        	
         	<div id="fragment-6" class="ui-tabs-panel ui-tabs-hide">
                    <div class="form-group">
 			          <label for="price" class="qhead">PRICE SELECTION</label>
-                      <h4>Enter lower bound : </h4>
-			          <input type="text" class="form-control" id="pricel" placeholder="Enter the lower bound" name="pricel">
-                      <h4>Enter upper bound : </h4>
-                      <input type="text" class="form-control" id="priceh" placeholder="Enter the upper bound" name="priceh">
+						<center><BR>
+							<section class="range-slider">
+								<span class="rangeValues"></span>
+								<input value="5" min="1" max="30" step="0.25" type="range">
+								<input value="10" min="1" max="30" step="0.25" type="range">
+						</center>
+							</section>
+             
                       <a href="#" class="myButton" id="runchk" onclick="myFunction()" >RUN CHECKMATE!</a>
 		          </div>       
         	</div>
