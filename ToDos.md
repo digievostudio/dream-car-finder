@@ -10,7 +10,7 @@
 
 **->** Create a 'My Account' page for users to add favorite cars and view recent 'CheckMate' results.
 
-**->** Add slider to select prices while using checkmate.
+**->** Add slider to select prices while using checkmate. (✔ **Done on 18 September**)
 
 **->** Fetch realtime prices using data parsing.
 
