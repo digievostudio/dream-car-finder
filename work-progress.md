@@ -93,3 +93,7 @@ Data parsing 90% completed
 
 ####17 Septemmber 2016
 -> Edit the display style of checkmate results
+
+####18 Septemmber 2016
+-> Added intro to checkmate
+-> Slider added for price selection in checkmate.
