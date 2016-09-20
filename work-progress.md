@@ -97,3 +97,7 @@ Data parsing 90% completed
 ####18 Septemmber 2016
 -> Added intro to checkmate
 -> Slider added for price selection in checkmate.
+
+####20 Septemmber 2016
+-> Added slider for fuel efficiency selection.
+-> Added an alert when no results are given by 'CheckMate' search.
