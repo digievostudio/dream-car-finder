@@ -108,8 +108,15 @@ if((ANTIBS.toLowerCase().search(antibs.toLowerCase())!=-1)||antibs.toLowerCase()
 
 if(k==293)
 {
-
-	window.location="result2.html";	
+	if(!namearr.length)
+	{
+		alert("No results found. Please try again by modifying the search parameters");
+		window.location="CheckmatePagemod5.html#fragment-1";
+	}
+	else
+	{
+		window.location="result2.html";
+	}	
 }   
 });
 

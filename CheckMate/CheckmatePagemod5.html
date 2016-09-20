@@ -104,7 +104,8 @@ function myFunction() {
                 break;
                 }
          }
-	var eff = document.getElementById('efficiency');
+	var eff = document.getElementById('amountRange');
+	
 	var slidel=localStorage.getItem("slide1");
 	var slideh=localStorage.getItem("slide2");
 	var priceh=slideh*100000;
@@ -277,6 +278,16 @@ section.range-slider input:last-of-type::-moz-range-track {
   section.range-slider input[type=range]::-moz-focus-outer {
   border: 0;
 }
+#amountRange {
+    position: relative;
+    width: 400px;
+    height: 85px;
+    top: 15px;
+    text-align: center;
+}
+#amountInput {
+	color:black;
+}
 </style>
 </head>
 
@@ -430,7 +441,14 @@ section.range-slider input:last-of-type::-moz-range-track {
         	<div id="fragment-5" class="ui-tabs-panel ui-tabs-hide">
                    <div class="form-group">
 			          <label for="fullname" class="qhead">FUEL EFFICIENCY</label>
-			          <input type="text" class="form-control" id="efficiency" placeholder="Enter the lower bound integer" name="efficiency">
+			          <form>
+							<center>
+							<input type="range" name="amountRange" id="amountRange" min="5" max="25" value="15" step="0.5" oninput="this.form.amountInput.value=this.value" />
+							<br>
+							Show cars with fuel efficiency greater than or equal to <input type="number" name="amountInput" id="amountInput" min="5" max="25" value="15" step="0.5" oninput="this.form.amountRange.value=this.value" />
+							
+							</center>
+					</form>
 		          </div>
         	</div>
         
