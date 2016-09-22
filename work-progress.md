@@ -92,7 +92,7 @@ Subin- Design of vector graphics, design of the webapp.
 ->Minor edit to homepage background
 
 ####17 September 2016
--> Edit the display style of checkmate results
+-> Edit the display style of checkmate results.
 
 ####18 September 2016
 -> Added intro to checkmate
