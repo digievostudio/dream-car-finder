@@ -88,7 +88,7 @@ Subin- Design of vector graphics, design of the webapp.
 ->Finishing up...
 
 ####16 September 2016
-->Adding markdown to dithub code
+->Adding markdown to github code
 ->Minor edit to homepage background
 
 ####17 September 2016
