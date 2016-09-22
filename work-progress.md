@@ -76,7 +76,7 @@ Subin- Design of vector graphics, design of the webapp.
 
 ####9-September 2016
 ->Video task shots completed.
-Data parsing 90% completed
+->Data parsing 50% completed
 
 ####11 September 2016
 ->Testing fetching data from database and authentication. Some bugs creeped in. Trying to fix them.
@@ -87,17 +87,17 @@ Data parsing 90% completed
 ->Video task posted
 ->Finishing up...
 
-####16 Septemmber 2016
+####16 September 2016
 ->Adding markdown to dithub code
 ->Minor edit to homepage background
 
-####17 Septemmber 2016
+####17 September 2016
 -> Edit the display style of checkmate results
 
-####18 Septemmber 2016
+####18 September 2016
 -> Added intro to checkmate
 -> Slider added for price selection in checkmate.
 
-####20 Septemmber 2016
+####20 September 2016
 -> Added slider for fuel efficiency selection.
 -> Added an alert when no results are given by 'CheckMate' search.
