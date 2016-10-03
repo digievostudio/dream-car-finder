@@ -101,3 +101,6 @@ Subin- Design of vector graphics, design of the webapp.
 ####20 September 2016
 -> Added slider for fuel efficiency selection.
 -> Added an alert when no results are given by 'CheckMate' search.
+
+####4 October 2016
+-> Working on a fix for the error in scaling of the website in different resolutions.
