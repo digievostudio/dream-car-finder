@@ -2,7 +2,7 @@
 
 **->** Make a mobile version for the website. 
 
-**->** Fix scaling issue on different screens.
+**->** Fix scaling issue on different screens. (**Partially done on 4 October**)
 
 **->** Redesign checkmate results and showroom pages
 
