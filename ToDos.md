@@ -15,3 +15,5 @@
 **->** Fetch realtime prices using data parsing.
 
 **->** Implement Car Showroom finder based on users location.
+
+**->** Align logo in about us page to centre.
